@@ -4,7 +4,7 @@ title: "Fragmentos del Alma"
 tecnica: "Óleo sobre lienzo"
 dimensiones: "100 x 120 cm"
 anio: "2024"
-imagen_principal: "fragmentos-del-alma.jpg"
+imagen_principal: "fragmentos-del-alma.png"
 certificado_id: "DT-2024-001"
 ---
 
