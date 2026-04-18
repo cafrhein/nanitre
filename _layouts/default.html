@@ -9,58 +9,74 @@
     
     <style>
         :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #666;
+            --primary-color: #000000;
+            --secondary-color: #757575;
             --bg-color: #ffffff;
-            --spacing: 2rem;
+            --spacing: 3rem;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
             color: var(--primary-color);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Header Minimalista */
+        /* Header con efecto Blur */
         header {
-            padding: var(--spacing);
+            padding: 1.5rem var(--spacing);
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             border-bottom: 1px solid #f0f0f0;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
         }
 
         header h1 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             margin: 0;
             letter-spacing: -0.5px;
         }
 
+        header h1 a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         nav a {
-            margin-left: 1.5rem;
+            margin-left: 2rem;
             text-decoration: none;
             color: var(--secondary-color);
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: var(--transition);
+            opacity: 0.7;
         }
 
         nav a:hover {
+            opacity: 1;
             color: var(--primary-color);
         }
 
         /* Contenedor Principal */
         main {
-            padding: var(--spacing);
-            max-width: 1200px;
+            padding: var(--spacing) 5%;
+            max-width: 1440px;
             margin: 0 auto;
             min-height: 80vh;
         }
 
-        /* Footer sutil */
+        /* Footer */
         footer {
             padding: var(--spacing);
             text-align: center;
@@ -70,22 +86,23 @@
             margin-top: 4rem;
         }
 
-        /* Estilos para imágenes de portfolio (Lazy Loading Ready) */
+        /* Utilidades de imagen */
         .img-fluid {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             display: block;
+            transition: var(--transition);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1><a href="{{ site.baseurl }}/" style="text-decoration: none; color: inherit;">{{ site.author.name | uppercase }}</a></h1>
+        <h1><a href="{{ site.baseurl }}/">{{ site.author.name }}</a></h1>
         <nav>
-            <a href="{{ site.baseurl }}/portfolio">Obra</a>
-            <a href="{{ site.baseurl }}/blog">Procesos</a>
-            <a href="{{ site.baseurl }}/verificacion">Verificación</a>
+            <a href="{{ site.baseurl }}/portfolio">Portfolio</a>
+            <a href="{{ site.baseurl }}/blog">Journal</a>
+            <a href="{{ site.baseurl }}/verificacion">Verify</a>
         </nav>
     </header>
 
