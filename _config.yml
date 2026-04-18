@@ -6,10 +6,9 @@ description: >-
   Exploración visual, procesos creativos y verificación de autenticidad.
 
 # Configuración de URLs
-# Si usas cafrhein.github.io/nanitre/, cambia baseurl a "/nanitre"
-# Si ya tienes nanitre.com configurado, déjalo como ""
-baseurl: ""
-url: "https://nanitre.com"
+# Ajustado para que funcione en cafrhein.github.io/nanitre/
+baseurl: "/nanitre"
+url: "https://cafrhein.github.io"
 
 # Configuración de Colecciones
 collections:
