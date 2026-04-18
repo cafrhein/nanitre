@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #666;
+            --bg-color: #ffffff;
+            --spacing: 2rem;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        /* Header Minimalista */
+        header {
+            padding: var(--spacing);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Contenedor Principal */
+        main {
+            padding: var(--spacing);
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 80vh;
+        }
+
+        /* Footer sutil */
+        footer {
+            padding: var(--spacing);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            border-top: 1px solid #f0f0f0;
+            margin-top: 4rem;
+        }
+
+        /* Estilos para imágenes de portfolio (Lazy Loading Ready) */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="{{ site.baseurl }}/" style="text-decoration: none; color: inherit;">{{ site.author.name | uppercase }}</a></h1>
+        <nav>
+            <a href="{{ site.baseurl }}/portfolio">Obra</a>
+            <a href="{{ site.baseurl }}/blog">Procesos</a>
+            <a href="{{ site.baseurl }}/verificacion">Verificación</a>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. Todos los derechos reservados.</p>
+        <p>Desarrollado con Jekyll & Art por Danielita Art Dev</p>
+    </footer>
+
+</body>
+</html>
