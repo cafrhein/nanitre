@@ -1,0 +1,12 @@
+# Base de datos de autenticidad de obras
+- id: "DT-2024-001"
+  titulo: "Fragmentos del Alma"
+  propietario: "Colección Privada"
+  fecha_emision: 2024-04-17
+  estado: "Original"
+
+- id: "DT-2024-002"
+  titulo: "Intersecciones UX"
+  propietario: "Disponible"
+  fecha_emision: 2024-03-10
+  estado: "Original"
