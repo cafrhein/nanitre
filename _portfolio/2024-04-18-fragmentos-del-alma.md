@@ -8,7 +8,4 @@ imagen_principal: "fragmentos-del-alma.jpg"
 certificado_id: "DT-2024-001"
 ---
 
-Escribe aquí la narrativa o el proceso creativo de esta pieza. 
-Puedes usar Markdown para dar formato al texto, igual que en el blog.
-
-Explora la intersección entre la materia y la emoción digital.
+Esta pieza explora la intersección entre la materia y la emoción digital. A través de pinceladas orgánicas, se busca capturar la esencia de lo intangible en un formato físico contemporáneo.
