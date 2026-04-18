@@ -98,6 +98,13 @@
             transition: var(--transition);
         }
 
+        /* Rejilla Responsiva para Portafolio e Inicio */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
         /* --- MEDIA QUERIES PARA RESPONSIVIDAD --- */
 
         /* Tablets y móviles (Ajuste de navegación) */
@@ -126,6 +133,10 @@
 
             main {
                 padding-top: 2rem;
+            }
+
+            .grid-layout {
+                grid-template-columns: 1fr;
             }
         }
 
