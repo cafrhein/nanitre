@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article class="obra-detalle" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: start;">
+    
+    <div class="obra-imagen">
+        <img src="{{ site.baseurl }}/assets/img/{{ page.imagen_principal }}" alt="{{ page.title }}" class="img-fluid">
+        
+        {% if page.galeria %}
+        <div class="galeria-secundaria" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+            {% for foto in page.galeria %}
+            <img src="{{ site.baseurl }}/assets/img/{{ foto }}" class="img-fluid">
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="obra-info" style="position: sticky; top: var(--spacing);">
+        <h1 style="font-size: 2.5rem; margin-top: 0;">{{ page.title }}</h1>
+        
+        <div class="meta-data" style="margin: 2rem 0; border-top: 1px solid #eee; padding-top: 1rem;">
+            <p><strong>Técnica:</strong> {{ page.tecnica }}</p>
+            <p><strong>Dimensiones:</strong> {{ page.dimensiones }}</p>
+            <p><strong>Año:</strong> {{ page.anio }}</p>
+            
+            {% if page.id_certificado %}
+            <p style="margin-top: 2rem;">
+                <span style="background: #f9f9f9; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.8rem; border: 1px solid #ddd;">
+                    ID Autenticidad: <strong>{{ page.id_certificado }}</strong>
+                </span>
+            </p>
+            {% endif %}
+        </div>
+
+        <div class="descripcion" style="font-size: 1rem; color: #444;">
+            {{ content }}
+        </div>
+
+        <a href="{{ site.baseurl }}/portfolio" style="display: block; margin-top: 3rem; font-size: 0.8rem; text-transform: uppercase; color: #888; text-decoration: none;">← Volver al portafolio</a>
+    </div>
+</article>
