@@ -1,0 +1,32 @@
+# Identidad del Sitio
+title: Edna Daniela Trejo Martínez | Art & UX
+email: contacto@nanitre.com
+description: >-
+  Ecosistema digital y portafolio artístico de Edna Daniela Trejo. 
+  Exploración visual, procesos creativos y verificación de autenticidad.
+baseurl: "" 
+url: "https://nanitre.com"
+
+# Configuración de Colecciones
+collections:
+  portfolio:
+    output: true
+    permalink: /obra/:path/
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Ajustes de Build
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/ bundle/
+
+# Datos Personalizados
+author:
+  name: "Daniela Trejo"
+  github: "danitrejo"
+  instagram: "@nanitre.art"
