@@ -14,7 +14,7 @@ url: "https://cafrhein.github.io"
 collections:
   portfolio:
     output: true
-    permalink: /obra/:path/
+    permalink: /obra/:title/
   posts:
     output: true
     permalink: /blog/:title/
