@@ -4,7 +4,7 @@ title: Inicio
 ---
 
 <section style="padding: 4rem 0; text-align: center;">
-    <h2 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem;">Exploración Visual & UX</h2>
+    <h2 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem;">Nanitre</h2>
     <p style="color: var(--secondary-color); max-width: 600px; margin: 0 auto 2rem;">
         Bienvenido al espacio creativo de Edna Daniela Trejo Martínez. 
         Donde el arte contemporáneo convergen con el diseño de experiencias digitales.
