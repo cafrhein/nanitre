@@ -17,10 +17,21 @@ title: Verificación de Autenticidad
             CONSULTAR REGISTRO
         </button>
     </div>
-
-    <div id="resultado" style="display: none; text-align: left; padding: 2.5rem; border: 1px solid #eee; border-radius: 8px; background-color: #fcfcfc; box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
-    </div>
 </section>
+
+<div id="modalResultado" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+    <div style="position: relative; background-color: #fcfcfc; margin: 10% auto; padding: 2.5rem; border: 1px solid #eee; border-radius: 8px; width: 90%; max-width: 500px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+        
+        <span onclick="cerrarModal()" style="position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: #999;">&times;</span>
+        
+        <div id="resultadoContenido" style="text-align: left;">
+            </div>
+
+        <button onclick="cerrarModal()" style="margin-top: 2rem; width: 100%; background: #f0f0f0; color: #333; border: none; padding: 0.8rem; cursor: pointer; border-radius: 4px; font-size: 0.9rem;">
+            CERRAR
+        </button>
+    </div>
+</div>
 
 <script>
     const database = [
@@ -36,11 +47,14 @@ title: Verificación de Autenticidad
     ];
 
     function verificar() {
-        const idBusqueda = document.getElementById('certId').value.trim().toUpperCase();
-        const contenedor = document.getElementById('resultado');
-        const pieza = database.find(item => item.id === idBusqueda);
+        const input = document.getElementById('certId');
+        const idBusqueda = input.value.trim().toUpperCase();
+        const modal = document.getElementById('modalResultado');
+        const contenedor = document.getElementById('resultadoContenido');
+        
+        if (idBusqueda === "") return;
 
-        contenedor.style.display = 'block';
+        const pieza = database.find(item => item.id === idBusqueda);
 
         if (pieza) {
             contenedor.innerHTML = `
@@ -59,11 +73,32 @@ title: Verificación de Autenticidad
             `;
         } else {
             contenedor.innerHTML = `
-                <div style="text-align: center; color: #e74c3c;">
+                <div style="text-align: center; color: #e74c3c; padding: 1rem 0;">
                     <p style="font-weight: 600; margin-bottom: 0.5rem;">ID no reconocido</p>
                     <p style="font-size: 0.85rem; color: #888; margin: 0;">Por favor, verifica que el código coincida con el de tu certificado físico o contacta a soporte.</p>
                 </div>
             `;
+        }
+        
+        modal.style.display = 'block';
+    }
+
+    function cerrarModal() {
+        const modal = document.getElementById('modalResultado');
+        const input = document.getElementById('certId');
+        const contenedor = document.getElementById('resultadoContenido');
+
+        modal.style.display = 'none';
+        // Limpiamos los campos para la siguiente consulta
+        input.value = "";
+        contenedor.innerHTML = "";
+    }
+
+    // Cerrar al hacer clic fuera del contenido blanco
+    window.onclick = function(event) {
+        const modal = document.getElementById('modalResultado');
+        if (event.target == modal) {
+            cerrarModal();
         }
     }
 </script>
