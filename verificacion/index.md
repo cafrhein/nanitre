@@ -25,7 +25,7 @@ title: Verificación de Autenticidad
         <span onclick="cerrarModal()" style="position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: #999;">&times;</span>
         
         <div id="resultadoContenido" style="text-align: left;">
-            </div>
+        </div>
 
         <button onclick="cerrarModal()" style="margin-top: 2rem; width: 100%; background: #f0f0f0; color: #333; border: none; padding: 0.8rem; cursor: pointer; border-radius: 4px; font-size: 0.9rem;">
             CERRAR
@@ -41,7 +41,8 @@ title: Verificación de Autenticidad
             "titulo": "{{ cert.titulo }}",
             "propietario": "{{ cert.propietario }}",
             "fecha": "{{ cert.fecha_emision }}",
-            "estado": "{{ cert.estado }}"
+            "estado": "{{ cert.estado }}",
+            "imagen": "{{ cert.imagen }}"
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ];
@@ -59,6 +60,8 @@ title: Verificación de Autenticidad
         if (pieza) {
             contenedor.innerHTML = `
                 <div style="border-bottom: 1px solid #eee; padding-bottom: 1.5rem; margin-bottom: 1.5rem; text-align: center;">
+                    <img src="${pieza.imagen}" alt="${pieza.titulo}" style="width: 100%; max-height: 250px; object-fit: contain; margin-bottom: 1rem; border-radius: 4px;">
+                    <br>
                     <span style="color: #27ae60; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">✓ Certificado Válido</span>
                 </div>
                 <div style="display: grid; gap: 1rem; font-size: 0.95rem;">
@@ -89,12 +92,10 @@ title: Verificación de Autenticidad
         const contenedor = document.getElementById('resultadoContenido');
 
         modal.style.display = 'none';
-        // Limpiamos los campos para la siguiente consulta
         input.value = "";
         contenedor.innerHTML = "";
     }
 
-    // Cerrar al hacer clic fuera del contenido blanco
     window.onclick = function(event) {
         const modal = document.getElementById('modalResultado');
         if (event.target == modal) {
