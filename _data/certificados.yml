@@ -1,10 +1,12 @@
 # Base de datos real de autenticidad - Edna Daniela Trejo Martínez
+
 - id: "DT-2024-003"
   titulo: "Mi Lugar Seguro"
   tecnica: "Acrílico sobre lienzo"
   anio: "2024"
   propietario: "Disponible"
   estado: "Original"
+  imagen: "/assets/img/portfolio/mi-lugar-seguro.webp"
 
 - id: "DT-2024-004"
   titulo: "El Brillo de la Espera"
@@ -12,6 +14,7 @@
   anio: "2024"
   propietario: "Disponible"
   estado: "Original"
+  imagen: "/assets/img/portfolio/el-brillo-de-la-espera.webp"
 
 - id: "DT-2024-005"
   titulo: "La Melancolía de la Luz"
@@ -19,3 +22,4 @@
   anio: "2024"
   propietario: "Disponible"
   estado: "Original"
+  imagen: "/assets/img/portfolio/la-melancolia-de-la-luz.webp"
