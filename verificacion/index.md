@@ -19,19 +19,33 @@ title: Verificación de Autenticidad
     </div>
 </section>
 
-<div id="modalResultado" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
-    <div style="position: relative; background-color: #fcfcfc; margin: 10% auto; padding: 2.5rem; border: 1px solid #eee; border-radius: 8px; width: 90%; max-width: 500px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+<div id="modalResultado" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;">
+    
+    <div style="position: relative; background-color: #ffffff; padding: 2.5rem; border-radius: 12px; width: 100%; max-width: 500px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.2); animation: modalFadeIn 0.3s ease-out;">
         
-        <span onclick="cerrarModal()" style="position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: #999;">&times;</span>
+        <span onclick="cerrarModal()" style="position: absolute; top: 15px; right: 20px; font-size: 1.8rem; cursor: pointer; color: #ccc; line-height: 1; transition: color 0.2s;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#ccc'">&times;</span>
         
         <div id="resultadoContenido" style="text-align: left;">
-        </div>
+            </div>
 
-        <button onclick="cerrarModal()" style="margin-top: 2rem; width: 100%; background: #f0f0f0; color: #333; border: none; padding: 0.8rem; cursor: pointer; border-radius: 4px; font-size: 0.9rem;">
+        <button onclick="cerrarModal()" style="margin-top: 2rem; width: 100%; background: #f5f5f5; color: #333; border: none; padding: 1rem; cursor: pointer; border-radius: 6px; font-size: 0.9rem; font-weight: 600; transition: background 0.2s;" onmouseover="this.style.background='#eee'" onmouseout="this.style.background='#f5f5f5'">
             CERRAR
         </button>
     </div>
 </div>
+
+<style>
+    /* Animación de entrada para suavidad UX */
+    @keyframes modalFadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Ajuste visual del modal cuando está activo */
+    #modalResultado.active {
+        display: flex !important;
+    }
+</style>
 
 <script>
     const database = [
@@ -40,7 +54,7 @@ title: Verificación de Autenticidad
             "id": "{{ cert.id }}",
             "titulo": "{{ cert.titulo }}",
             "propietario": "{{ cert.propietario }}",
-            "fecha": "{{ cert.fecha_emision }}",
+            "fecha": "{{ cert.anio }}",
             "estado": "{{ cert.estado }}",
             "imagen": "{{ cert.imagen }}"
         }{% unless forloop.last %},{% endunless %}
@@ -59,43 +73,41 @@ title: Verificación de Autenticidad
 
         if (pieza) {
             contenedor.innerHTML = `
-                <div style="border-bottom: 1px solid #eee; padding-bottom: 1.5rem; margin-bottom: 1.5rem; text-align: center;">
-                    <img src="${pieza.imagen}" alt="${pieza.titulo}" style="width: 100%; max-height: 250px; object-fit: contain; margin-bottom: 1rem; border-radius: 4px;">
-                    <br>
-                    <span style="color: #27ae60; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">✓ Certificado Válido</span>
+                <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 1.5rem; margin-bottom: 1.5rem; text-align: center;">
+                    <img src="${pieza.imagen}" alt="${pieza.titulo}" style="width: 100%; max-height: 280px; object-fit: contain; margin-bottom: 1.5rem; border-radius: 4px; background: #f9f9f9;">
+                    <div style="display: inline-block; padding: 4px 12px; background: #eafff2; border-radius: 20px; margin-bottom: 10px;">
+                        <span style="color: #27ae60; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">✓ Certificado Válido</span>
+                    </div>
+                    <h3 style="margin: 10px 0 0; font-size: 1.4rem; font-weight: 600;">${pieza.titulo}</h3>
                 </div>
-                <div style="display: grid; gap: 1rem; font-size: 0.95rem;">
-                    <p style="margin:0;"><strong>Título de la Obra:</strong> <span style="color: #444;">${pieza.titulo}</span></p>
-                    <p style="margin:0;"><strong>Estado de Propiedad:</strong> <span style="color: #444;">${pieza.propietario}</span></p>
-                    <p style="margin:0;"><strong>Fecha de Registro:</strong> <span style="color: #444;">${pieza.fecha}</span></p>
-                    <p style="margin:0;"><strong>Condición:</strong> <span style="color: #444;">${pieza.estado}</span></p>
+                <div style="display: grid; gap: 0.8rem; font-size: 0.9rem; color: #666;">
+                    <p style="margin:0; display: flex; justify-content: space-between;"><strong style="color: #000;">Propietario:</strong> <span>${pieza.propietario}</span></p>
+                    <p style="margin:0; display: flex; justify-content: space-between;"><strong style="color: #000;">Año de Registro:</strong> <span>${pieza.fecha}</span></p>
+                    <p style="margin:0; display: flex; justify-content: space-between;"><strong style="color: #000;">Estado:</strong> <span>${pieza.estado}</span></p>
                 </div>
-                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #eee; font-size: 0.8rem; color: #999; text-align: center;">
-                    Registro oficial Nanitre ID: ${pieza.id}
+                <div style="margin-top: 2rem; padding: 1rem; background: #fcfcfc; border: 1px dashed #ddd; border-radius: 6px; font-size: 0.75rem; color: #999; text-align: center; font-family: monospace;">
+                    REGISTRO OFICIAL NANITRE ID: ${pieza.id}
                 </div>
             `;
         } else {
             contenedor.innerHTML = `
-                <div style="text-align: center; color: #e74c3c; padding: 1rem 0;">
-                    <p style="font-weight: 600; margin-bottom: 0.5rem;">ID no reconocido</p>
-                    <p style="font-size: 0.85rem; color: #888; margin: 0;">Por favor, verifica que el código coincida con el de tu certificado físico o contacta a soporte.</p>
+                <div style="text-align: center; padding: 2rem 0;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+                    <p style="font-weight: 600; color: #000; margin-bottom: 0.5rem; font-size: 1.1rem;">ID No Encontrado</p>
+                    <p style="font-size: 0.9rem; color: #777; margin: 0; line-height: 1.5;">El código no coincide con nuestros registros de autenticidad. Por favor, revisa el certificado físico.</p>
                 </div>
             `;
         }
         
-        modal.style.display = 'block';
+        modal.classList.add('active');
     }
 
     function cerrarModal() {
         const modal = document.getElementById('modalResultado');
-        const input = document.getElementById('certId');
-        const contenedor = document.getElementById('resultadoContenido');
-
-        modal.style.display = 'none';
-        input.value = "";
-        contenedor.innerHTML = "";
+        modal.classList.remove('active');
     }
 
+    // Cerrar al hacer clic fuera del contenido blanco
     window.onclick = function(event) {
         const modal = document.getElementById('modalResultado');
         if (event.target == modal) {
