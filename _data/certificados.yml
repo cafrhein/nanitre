@@ -1,12 +1,21 @@
-# Base de datos de autenticidad de obras
+# Base de datos real de autenticidad - Edna Daniela Trejo Martínez
 - id: "DT-2024-001"
-  titulo: "Fragmentos del Alma"
-  propietario: "Colección Privada"
-  fecha_emision: 2024-04-17
+  titulo: "Mi Lugar Seguro"
+  tecnica: "Acrílico sobre lienzo"
+  anio: "2024"
+  propietario: "Disponible"
   estado: "Original"
 
 - id: "DT-2024-002"
-  titulo: "Intersecciones UX"
+  titulo: "El Brillo de la Espera"
+  tecnica: "Óleo sobre lienzo"
+  anio: "2024"
   propietario: "Disponible"
-  fecha_emision: 2024-03-10
+  estado: "Original"
+
+- id: "DT-2024-003"
+  titulo: "La Melancolía de la Luz"
+  tecnica: "Óleo sobre lienzo"
+  anio: "2024"
+  propietario: "Disponible"
   estado: "Original"
