@@ -6,7 +6,7 @@
   anio: "2024"
   propietario: "Disponible"
   estado: "Original"
-  imagen: "/assets/img/mi-lugar-seguro.png"
+  imagen: "/nanitre/assets/img/Mi-Lugar-Seguro.png"
 
 - id: "DT-2024-004"
   titulo: "El Brillo de la Espera"
@@ -14,7 +14,7 @@
   anio: "2024"
   propietario: "Disponible"
   estado: "Original"
-  imagen: "/assets/img/el-brillo-de-la-espera.png"
+  imagen: "/nanitre/assets/img/El-Brillo-de-la-Espera.png"
 
 - id: "DT-2024-005"
   titulo: "La Melancolía de la Luz"
@@ -22,4 +22,4 @@
   anio: "2024"
   propietario: "Disponible"
   estado: "Original"
-  imagen: "/assets/img/la-melancolia-de-la-luz.png"
+  imagen: "/nanitre/assets/img/La-Melancolía-de-la-Luz.png"
