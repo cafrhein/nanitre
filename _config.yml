@@ -7,8 +7,8 @@ description: >-
 
 # Configuración de URLs
 # Ajustado para que funcione en cafrhein.github.io/nanitre/
-baseurl: "/nanitre"
-url: "https://cafrhein.github.io"
+baseurl: ""
+url: "https://nanitre.com"
 
 # Configuración de Colecciones
 collections:
