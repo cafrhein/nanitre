@@ -2,7 +2,7 @@
 <section class="author-signature">
   <div class="sig-container">
     <div class="sig-avatar-col">
-      <img src="/assets/img/perfil-daniela.webp" alt="Daniela Trejo" class="sig-avatar">
+      <img src="{{ '/assets/img/Daniela_Trejo.png' | relative_url }}" alt="Daniela Trejo" class="sig-avatar" loading="lazy">
     </div>
     
     <div class="sig-info-col">
@@ -12,7 +12,7 @@
         <p class="sig-bio">Explorando la intersección entre la plástica contemporánea.</p>
         
         <div class="sig-links">
-          <a href="/portfolio">Portafolio</a> • 
+          <a href="{{ '/portfolio' | relative_url }}">Portafolio</a> • 
           <a href="https://www.instagram.com/naniitre/" target="_blank" rel="noopener noreferrer">Contacto</a>
         </div>
       </div>
@@ -31,7 +31,11 @@
     max-width: 650px;
   }
 
-  /* Control de la imagen de perfil */
+  /* Evita que el contenedor de texto aplaste la imagen */
+  .sig-avatar-col {
+    flex-shrink: 0; 
+  }
+
   .sig-avatar {
     width: 80px;
     height: 80px;
@@ -39,7 +43,7 @@
     object-fit: cover;
     border: 1px solid #f0f0f0;
     display: block;
-    background-color: #fafafa; /* Color de fondo mientras carga */
+    background-color: #fafafa;
   }
 
   .sig-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #999; margin: 0 0 0.4rem 0; }
@@ -50,7 +54,6 @@
   .sig-links a { font-size: 0.85rem; color: #000; text-decoration: none; border-bottom: 1px solid #ddd; transition: 0.3s; padding-bottom: 2px; }
   .sig-links a:hover { border-bottom: 1px solid #000; color: #000; }
 
-  /* Ajuste para móviles */
   @media (max-width: 480px) {
     .sig-container { flex-direction: column; text-align: center; }
     .sig-avatar { margin: 0 auto; }
