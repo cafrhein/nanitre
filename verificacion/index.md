@@ -82,9 +82,7 @@ title: Verificación de Autenticidad
         transition: color 0.2s;
     }
 
-    .close-icon:hover {
-        color: #000;
-    }
+    .close-icon:hover { color: #000; }
 
     .badge-valid {
         display: inline-flex;
@@ -108,7 +106,6 @@ title: Verificación de Autenticidad
         letter-spacing: -0.5px;
     }
 
-    /* Estilos mejorados para que la imagen no se rompa visualmente */
     .cert-artwork-container {
         width: 100%;
         max-height: 300px;
@@ -176,7 +173,6 @@ title: Verificación de Autenticidad
 </style>
 
 <script>
-    // Generación dinámica con corrección de rutas de imagen mediante Liquid
     const database = [
         {% for cert in site.data.certificados %}
         {
@@ -245,7 +241,17 @@ title: Verificación de Autenticidad
     }
 
     function cerrarModal() {
-        document.getElementById('modalResultado').classList.remove('active');
+        const modal = document.getElementById('modalResultado');
+        const input = document.getElementById('certId');
+        
+        // 1. Cerramos la ventana modal
+        modal.classList.remove('active');
+        
+        // 2. Limpiamos el código consultado del input
+        input.value = '';
+        
+        // 3. Devolvemos el foco al input para que el usuario pueda escribir de nuevo
+        input.focus();
     }
 
     window.onclick = function(event) {
