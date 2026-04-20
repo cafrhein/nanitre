@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bienvenidos a mi Espacio Digital: Arte, Proceso y Autenticidad"
-date: 2026-04-20 09:00:00 -0600
+date: 2026-04-19 09:00:00 -0600
 categories: [Noticias, General]
 tags: [bienvenida, arte-contemporaneo, portafolio]
 author: "Edna Daniela Trejo Martínez"
