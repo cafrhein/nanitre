@@ -5,13 +5,8 @@ permalink: /perfil/
 ---
 
 <style>
-  /* 1. Ocultar Menú Superior solo en esta página */
-  /* Ajustamos los selectores comunes de Jekyll (Minima y otros temas estándar) */
-  header.site-header, 
-  .site-header, 
-  nav.site-nav {
-    display: none !important;
-  }
+  /* 1. Menú Superior Habilitado */
+  /* Se han eliminado las reglas que ocultaban el header para mantener consistencia UX */
 
   /* Reset y Base para Full Width */
   .main-content {
@@ -172,6 +167,6 @@ permalink: /perfil/
   </div>
 
   <div class="back-container">
-    <a href="javascript:history.back()" class="btn-back">← Volver al inicio</a>
+    <a href="{{ site.baseurl }}/" class="btn-back">← Volver al inicio</a>
   </div>
 </div>
