@@ -70,7 +70,7 @@ permalink: /perfil/
   <p>
     Desde 2018, me desempeño como <strong>Artista Visual y Gestora de Proyectos</strong>, 
     encargándome de la administración integral de marca, negociación directa con coleccionistas 
-    y presupuestación de obra bajo estándares de alta calidad. [cite: 39, 41, 42]
+    y presupuestación de obra bajo estándares de alta calidad.
   </p>
 
 </div>
