@@ -14,7 +14,7 @@ permalink: /perfil/
     color: #222;
   }
 
-  /* Contenedor de Portada (Full Width dentro del container) */
+  /* Contenedor de Portada */
   .hero-container {
     width: 100%;
     margin: 20px 0 40px 0;
@@ -28,18 +28,20 @@ permalink: /perfil/
     height: auto;
     display: block;
     object-fit: cover;
-    max-height: 450px; /* Altura máxima para no desplazar todo el texto */
+    max-height: 450px;
   }
 
-  /* Foto de Perfil Circular/Cuadrada refinada */
+  /* Foto de Perfil con corrección de encuadre */
   .artist-photo {
     width: 160px;
     height: 160px;
     object-fit: cover;
+    /* Ajuste para no cortar la cabeza: 10% desde el borde superior */
+    object-position: center 10%; 
     display: block;
-    margin: -80px auto 20px auto; /* Efecto overlap sobre la portada */
+    margin: -80px auto 20px auto; 
     border: 4px solid #fff;
-    border-radius: 50%; /* Foto circular para contraste con la portada rectangular */
+    border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: relative;
     z-index: 2;
@@ -92,7 +94,11 @@ permalink: /perfil/
   @media (max-width: 768px) {
     .artist-name { font-size: 1.8rem; }
     .hero-image { max-height: 250px; }
-    .artist-photo { width: 120px; height: 120px; margin-top: -60px; }
+    .artist-photo { 
+      width: 130px; 
+      height: 130px; 
+      margin-top: -65px; 
+    }
   }
 </style>
 
