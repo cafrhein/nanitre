@@ -6,7 +6,7 @@ title: Inicio
 <section style="padding: 4rem 0; text-align: center;">
     <h2 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem;">Nanitre</h2>
     <p style="color: var(--secondary-color); max-width: 600px; margin: 0 auto 2rem;">
-        Bienvenido al espacio creativo de Daniela Trejo. 
+        Bienvenidos a mi espacio creativo. 
     </p>
     <a href="{{ '/portfolio' | relative_url }}" style="padding: 1rem 2rem; border: 1px solid var(--primary-color); text-decoration: none; color: var(--primary-color); font-size: 0.9rem; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-color)'">
         Ver Portafolio
