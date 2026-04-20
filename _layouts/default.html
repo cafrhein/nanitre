@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary-color: #000000;
@@ -91,6 +91,27 @@
             margin-top: 4rem;
         }
 
+        .footer-links {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.7rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
         .img-fluid {
             width: 100%;
             height: auto;
@@ -145,7 +166,7 @@
             header h1 {
                 font-size: 1rem;
             }
-            
+
             nav {
                 flex-wrap: wrap;
                 gap: 0.8rem;
@@ -169,6 +190,10 @@
     </main>
 
     <footer>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/naniitre?igsh=MXA5dWx4czN4OGFtaw==" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://patreon.com/Daniverso?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank" rel="noopener">Patreon</a>
+        </div>
         <p>&copy; {{ "now" | date: "%Y" }} Edna Daniela Trejo Martínez | Nanitre | Todos los derechos reservados.</p>
     </footer>
 
