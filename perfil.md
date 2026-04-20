@@ -118,7 +118,7 @@ permalink: /perfil/
        class="artist-avatar">
 
   <h1 class="artist-name">Daniela Trejo</h1>
-  <p class="artist-tagline">Licenciada en Artes Visuales | UI/UX Artist</p>
+  <p class="artist-tagline">Licenciada en Artes Visuales</p>
 
   <div class="profile-text-content">
     <p>
