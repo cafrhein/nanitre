@@ -2,12 +2,31 @@
 layout: default
 ---
 
-<article style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+<article style="max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: left;">
+  
   <header style="margin-bottom: 3rem;">
-    <h1 style="font-size: 2.5rem; font-weight: 600; letter-spacing: -1px; overflow-wrap: break-word; word-break: break-word;">{{ page.title }}</h1>
-    <time style="color: var(--secondary-color); font-size: 0.9rem;">
+    
+    <h1 style="
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0;
+      line-height: 1.2;
+      overflow-wrap: break-word;
+      text-wrap: balance;
+    ">
+      {{ page.title }}
+    </h1>
+    
+    <time style="
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--secondary-color);
+      font-size: 0.9rem;
+    ">
       {{ page.date | date: "%d de %B, %Y" }}
     </time>
+  
   </header>
 
   <div class="post-content" style="line-height: 1.8; font-size: 1.1rem;">
@@ -21,4 +40,5 @@ layout: default
       ← Volver al Blog
     </a>
   </footer>
+
 </article>
