@@ -2,23 +2,94 @@
 layout: default
 ---
 
-<article style="max-width: 800px; margin: 0 auto;">
-  <header style="margin-bottom: 3rem;">
-    <h1 style="font-size: 2.5rem; font-weight: 600; letter-spacing: -1px;">{{ page.title }}</h1>
-    <time style="color: var(--secondary-color); font-size: 0.9rem;">
-      {{ page.date | date: "%d de %B, %Y" }}
-    </time>
+<style>
+  /* Contenedor con márgenes de seguridad */
+  .post-wrapper {
+    max-width: 750px; /* Ancho óptimo para lectura */
+    margin: 0 auto;
+    padding: 0 5%; /* Evita que el texto toque los bordes en móviles */
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* Fuerza el ajuste de palabras largas */
+  }
+
+  .post-header {
+    margin-bottom: 3.5rem;
+    text-align: left;
+  }
+
+  .post-title {
+    /* Tipografía fluida: Se ajusta sola entre 1.8rem y 3rem según el ancho de pantalla */
+    font-size: clamp(1.8rem, 6vw, 3rem); 
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+  }
+
+  .post-date {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--secondary-color);
+  }
+
+  /* Cuerpo del artículo */
+  .post-body {
+    line-height: 1.85;
+    font-size: 1.125rem;
+    color: #1a1a1a;
+  }
+
+  .post-body p { margin-bottom: 1.6rem; }
+  
+  .post-body h2, .post-body h3 { 
+    margin-top: 2.5rem; 
+    margin-bottom: 1rem; 
+    line-height: 1.2;
+  }
+
+  .post-footer {
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #eee;
+  }
+
+  .btn-back {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s;
+  }
+
+  .btn-back:hover { opacity: 0.6; }
+
+  @media (max-width: 768px) {
+    .post-header { margin-bottom: 2.5rem; }
+    .post-body { font-size: 1.05rem; }
+  }
+</style>
+
+<article class="post-wrapper">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-date">
+      {{ page.date | date: "%d · %m · %Y" }}
+    </div>
   </header>
 
-  <div class="post-content" style="line-height: 1.8; font-size: 1.1rem;">
+  <div class="post-body">
     {{ content }}
   </div>
 
   {% include author-signature.html %}
 
-  <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #f0f0f0;">
-    <a href="{{ site.baseurl }}/blog" style="text-decoration: none; color: var(--primary-color); font-size: 0.9rem; font-weight: 600;">
-      ← Volver al Blog
+  <footer class="post-footer">
+    <a href="{{ site.baseurl }}/blog" class="btn-back">
+      ← Volver al índice del blog
     </a>
   </footer>
 </article>
