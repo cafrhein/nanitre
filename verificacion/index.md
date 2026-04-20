@@ -39,7 +39,7 @@ title: Verificación de Autenticidad
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255,255,255,0.9);
+        background-color: rgba(255,255,255,0.95);
         backdrop-filter: blur(10px);
         align-items: center;
         justify-content: center;
@@ -58,6 +58,8 @@ title: Verificación de Autenticidad
         border-radius: 8px;
         width: 100%;
         max-width: 550px;
+        max-height: 90vh;
+        overflow-y: auto;
         box-shadow: 0 40px 100px rgba(0,0,0,0.1);
         animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         text-align: center;
@@ -76,6 +78,12 @@ title: Verificación de Autenticidad
         cursor: pointer;
         color: #ddd;
         font-weight: 300;
+        line-height: 1;
+        transition: color 0.2s;
+    }
+
+    .close-icon:hover {
+        color: #000;
     }
 
     .badge-valid {
@@ -96,28 +104,29 @@ title: Verificación de Autenticidad
     .cert-title {
         font-size: 1.8rem;
         font-weight: 400;
-        margin: 0 0 1rem 0;
+        margin: 0 0 1.5rem 0;
         letter-spacing: -0.5px;
     }
 
-    /* Estilos avanzados para la imagen del modal */
+    /* Estilos mejorados para que la imagen no se rompa visualmente */
     .cert-artwork-container {
         width: 100%;
-        max-height: 40vh; /* Máxima altura de la imagen en relación a la pantalla */
-        overflow: hidden;
-        border-radius: 4px;
+        max-height: 300px;
         margin-bottom: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        background: #fdfdfd;
+        border-radius: 4px;
+        overflow: hidden;
     }
 
     .cert-artwork {
         max-width: 100%;
-        max-height: 100%;
-        object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
-        display: block;
+        max-height: 300px;
+        object-fit: contain;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        border-radius: 4px;
     }
 
     .info-table {
@@ -167,8 +176,7 @@ title: Verificación de Autenticidad
 </style>
 
 <script>
-    // Generación dinámica de la base de datos desde Jekyll
-    // Asumimos que `imagen` es un campo en site.data.certificados
+    // Generación dinámica con corrección de rutas de imagen mediante Liquid
     const database = [
         {% for cert in site.data.certificados %}
         {
@@ -177,7 +185,7 @@ title: Verificación de Autenticidad
             "propietario": "{{ cert.propietario }}",
             "fecha": "{{ cert.anio }}",
             "estado": "{{ cert.estado }}",
-            "imagen": "{{ cert.imagen | relative_url }}"
+            "imagen": "{{ cert.imagen | replace: '/nanitre', '' | relative_url }}"
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ];
@@ -198,7 +206,7 @@ title: Verificación de Autenticidad
                 <h3 class="cert-title">${pieza.titulo}</h3>
                 
                 <div class="cert-artwork-container">
-                    <img src="${pieza.imagen}" alt="Obra: ${pieza.titulo}" class="cert-artwork">
+                    <img src="${pieza.imagen}" alt="Obra: ${pieza.titulo}" class="cert-artwork" onerror="this.style.display='none';">
                 </div>
                 
                 <div class="info-table">
