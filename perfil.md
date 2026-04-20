@@ -5,7 +5,35 @@ permalink: /perfil/
 ---
 
 <style>
-  .profile-container {
+  /* Reset y Base para Full Width */
+  .main-content { /* Ajuste por si tu tema Jekyll tiene padding por defecto */
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Portada Full Width */
+  .hero-full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 45vh; /* Altura relativa a la pantalla */
+    min-height: 300px;
+    background: #1a1a1a;
+    overflow: hidden;
+  }
+
+  .hero-full-width img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Contenedor de Contenido */
+  .profile-wrapper {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px 60px 20px;
@@ -14,126 +42,98 @@ permalink: /perfil/
     color: #222;
   }
 
-  /* Contenedor de Portada */
-  .hero-container {
-    width: 100%;
-    margin: 20px 0 40px 0;
-    overflow: hidden;
-    border-radius: 2px;
-    background: #f9f9f9;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
+  /* Foto de Perfil Circular Solapada */
+  .artist-avatar {
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    max-height: 450px;
-  }
-
-  /* Foto de Perfil con corrección de encuadre */
-  .artist-photo {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    /* Ajuste para no cortar la cabeza: 10% desde el borde superior */
-    object-position: center 10%; 
+    object-position: center 10%; /* Mantiene encuadre del rostro */
     display: block;
-    margin: -80px auto 20px auto; 
-    border: 4px solid #fff;
+    margin: -90px auto 30px auto; /* Sube la mitad del tamaño de la foto */
+    border: 6px solid #fff;
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     position: relative;
-    z-index: 2;
+    z-index: 10;
+    background: #fff;
   }
 
   .artist-name {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 5px;
     text-transform: uppercase;
+    color: #111;
   }
 
   .artist-tagline {
     text-align: center;
-    color: #777;
-    margin-bottom: 50px;
+    color: #888;
+    margin-bottom: 60px;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 3px;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
   }
 
-  .profile-content {
+  .profile-text-content {
     max-width: 700px;
     margin: 0 auto;
   }
 
-  .section-title {
-    border-bottom: 1px solid #eee;
+  .section-divider {
+    border-bottom: 1px solid #eaeaea;
     display: block;
-    margin: 40px 0 20px 0;
+    margin: 50px 0 25px 0;
     padding-bottom: 10px;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 2px;
-    color: #444;
-  }
-
-  ul {
-    padding-left: 20px;
-    list-style-type: square;
-  }
-
-  li {
-    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
   }
 
   /* Responsivo */
   @media (max-width: 768px) {
+    .hero-full-width { height: 30vh; }
     .artist-name { font-size: 1.8rem; }
-    .hero-image { max-height: 250px; }
-    .artist-photo { 
-      width: 130px; 
-      height: 130px; 
-      margin-top: -65px; 
+    .artist-avatar { 
+      width: 140px; 
+      height: 140px; 
+      margin-top: -70px; 
     }
   }
 </style>
 
-<div class="hero-container">
-  <img src="{{ '/assets/img/Daniela-Trejo-Portada-Web.png' | relative_url }}" 
-       alt="Edna Daniela Trejo Martínez - Portada" 
-       class="hero-image">
+<div class="hero-full-width">
+  <img src="{{ '/assets/img/Imagen-Portada.png' | relative_url }}" 
+       alt="Edna Daniela Trejo Martínez - Portada Artística">
 </div>
 
-<div class="profile-container">
+<div class="profile-wrapper">
   
   <img src="{{ '/assets/img/Daniela_Trejo.png' | relative_url }}" 
        alt="Daniela Trejo" 
-       class="artist-photo">
+       class="artist-avatar">
 
   <h1 class="artist-name">Daniela Trejo</h1>
-  <p class="artist-tagline">Licenciada en Artes Visuales</p>
+  <p class="artist-tagline">Licenciada en Artes Visuales | UI/UX Artist</p>
 
-  <div class="profile-content">
+  <div class="profile-text-content">
     <p>
-      Mi práctica artística integra la exploración creativa con un dominio riguroso de la técnica y la ejecución de proyectos de principio a fin.
+      Mi práctica artística integra la exploración creativa con un dominio riguroso de la técnica y la ejecución de proyectos de principio a fin, enfocada en la intersección entre lo analógico y lo digital.
     </p>
 
-    <h3 class="section-title">Formación Académica</h3>
+    <h3 class="section-divider">Formación Académica</h3>
     <ul>
       <li><strong>Licenciatura en Artes Visuales</strong> – Escuela Nacional de Artes Plásticas (Generación 2009).</li>
       <li><strong>Taller: Dibujo de la figura humana</strong> – Antigua Academia de San Carlos (2019).</li>
     </ul>
 
-    <h3 class="section-title">Gestión de Estudio</h3>
+    <h3 class="section-divider">Gestión de Estudio & Proyectos</h3>
     <p>
-      Desde 2018, me desempeño como <strong>Artista Visual y Gestora de Proyectos</strong>, 
-      encargándome de la administración integral de marca, negociación directa con coleccionistas 
-      y presupuestación de obra bajo estándares de alta calidad.
+      Desde 2018, lidero mi propio estudio como <strong>Artista Visual y Gestora de Proyectos</strong>, gestionando la administración de marca, la relación con coleccionistas y la curaduría de piezas certificadas.
     </p>
   </div>
-
 </div>
