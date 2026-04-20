@@ -54,18 +54,16 @@ permalink: /perfil/
        class="artist-photo">
 
   <h1 class="artist-name">Daniela Trejo</h1>
-  [cite_start]<p class="artist-tagline">Licenciada en Artes Visuales [cite: 10]</p>
+  <p class="artist-tagline">Licenciada en Artes Visuales</p>
 
   <p>
-    Profesional enfocada en la construcción de vínculos a través del asesoramiento técnico 
-    [cite_start]y la resolución proactiva de necesidades.  Mi práctica artística se complementa 
-    con una sólida capacidad para el control de procesos y la gestión de proyectos. [cite: 6]
+    Mi práctica artística integra la exploración creativa con un dominio riguroso de la técnica y la ejecución de proyectos de principio a fin.
   </p>
 
   <h3 class="section-title">Formación Académica</h3>
   <ul>
-    <li><strong>Licenciatura en Artes Visuales</strong> – Escuela Nacional de Artes Plásticas (Generación 2009). [cite: 10]</li>
-    <li><strong>Taller: Dibujo de la figura humana</strong> – Antigua Academia de San Carlos (2019). [cite: 12]</li>
+    <li><strong>Licenciatura en Artes Visuales</strong> – Escuela Nacional de Artes Plásticas (Generación 2009).</li>
+    <li><strong>Taller: Dibujo de la figura humana</strong> – Antigua Academia de San Carlos (2019).</li>
   </ul>
 
   <h3 class="section-title">Gestión de Estudio</h3>
