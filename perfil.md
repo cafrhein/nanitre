@@ -1,43 +1,56 @@
 ---
 layout: page
-title: Perfil
+title: Perfil Artístico
 permalink: /perfil/
 ---
 
-<div class="profile-container">
-  <section class="profile-intro">
-    <h1 class="fade-in">Daniela Trejo</h1>
-    <h2 class="subtitle">Ejecutiva de Cuentas & Gestora de Proyectos</h2>
-    <p class="bio-text">
-      Profesional enfocada en la gestión de cuentas y atención al cliente en sectores de alta exigencia[cite: 4]. 
-      Especialista en construir vínculos de confianza y asesoría técnica proactiva[cite: 5].
-    </p>
-  </section>
+<div class="artist-profile">
+  <header class="artist-header">
+    <h1 class="artist-name">Edna Daniela Trejo Martínez</h1>
+    <p class="artist-tagline">Artes Visuales | Ciudad de México</p>
+  </header>
 
-  <hr class="divider">
-
-  <section class="experience-grid">
-    <div class="exp-item">
-      <h3>Gestión Operativa</h3>
-      <p>Administración general y dirección financiera, optimizando recursos y rentabilidad[cite: 46, 47].</p>
-    </div>
-    <div class="exp-item">
-      <h3>Hospitalidad Digital</h3>
-      <p>Gestión estratégica de canales (Airbnb) y atención a mercados internacionales[cite: 51, 52].</p>
-    </div>
-    <div class="exp-item">
-      <h3>Visión Artística</h3>
-      <p>Licenciada en Artes Visuales por la ENAP, aplicando la estética a la ejecución de proyectos[cite: 10, 39].</p>
+  <section class="artist-statement">
+    <div class="statement-content">
+      <blockquote>
+        "Mi práctica artística se fundamenta en la exploración de la figura humana y la gestión de procesos creativos como una extensión de la obra misma."
+      </blockquote>
+      <p>
+        Licenciada en Artes Visuales por la Escuela Nacional de Artes Plásticas (Generación 2009), 
+        mi trayectoria se ha consolidado a través de la experimentación técnica y el estudio continuo, 
+        incluyendo formación especializada en la Antigua Academia de San Carlos.
+      </p>
     </div>
   </section>
 
-  <section class="skills-set">
-    <h3>Expertise</h3>
-    <ul>
-      <li>Gestión de Cuentas B2B y B2C [cite: 17, 18]</li>
-      <li>Venta Consultiva y Sugestiva [cite: 19]</li>
-      <li>Logística y Cumplimiento de Metas [cite: 20]</li>
-      <li>Resolución Proactiva de Conflictos [cite: 21]</li>
-    </ul>
+  <section class="artist-education">
+    <h3>Formación Académica</h3>
+    <div class="edu-item">
+      <span class="year">2019</span>
+      <div class="details">
+        <strong>Taller: Dibujo de la figura humana</strong>
+        <p>Antigua Academia de San Carlos</p>
+      </div>
+    </div>
+    <div class="edu-item">
+      <span class="year">2009</span>
+      <div class="details">
+        <strong>Licenciatura en Artes Visuales</strong>
+        <p>Escuela Nacional de Artes Plásticas (ENAP)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="creative-focus">
+    <div class="focus-grid">
+      <div class="focus-box">
+        <h4>Técnica</h4>
+        <p>Especialización en dibujo anatómico y procesos pictóricos contemporáneos.</p>
+      </div>
+      <div class="focus-box">
+        <h4>Gestión Cultural</h4>
+        <p>Administración integral de estudios de arte y curaduría de proyectos personales.</p>
+      </div>
+    </div>
   </section>
 </div>
