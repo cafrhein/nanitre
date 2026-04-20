@@ -2,18 +2,19 @@
 <section class="author-signature">
   <div class="sig-container">
     <div class="sig-avatar-col">
-      <img src="/assets/img/daniela-trejo-perfil.webp" alt="Daniela Trejo" class="sig-avatar">
+      <img src="/assets/img/perfil-daniela.webp" alt="Daniela Trejo" class="sig-avatar">
     </div>
     
     <div class="sig-info-col">
-      <a href="https://nanitre.com/perfil/" style="text-decoration: none; color: inherit; display: block;">
+      <div class="sig-content-wrapper">
         <p class="sig-label">Artista & Autora</p>
         <h3 class="sig-name">Daniela Trejo</h3>
         <p class="sig-bio">Explorando la intersección entre la plástica contemporánea.</p>
-      </a>
-      <div class="sig-links">
-        <a href="/portfolio">Portafolio</a> • 
-        <a href="https://www.instagram.com/TU_USUARIO_AQUÍ" target="_blank" rel="noopener noreferrer">Contacto</a>
+        
+        <div class="sig-links">
+          <a href="/portfolio">Portafolio</a> • 
+          <a href="https://www.instagram.com/naniitre/" target="_blank" rel="noopener noreferrer">Contacto</a>
+        </div>
       </div>
     </div>
   </div>
@@ -21,36 +22,37 @@
 
 <style>
   .sig-divider { border: 0; border-top: 1px solid #eee; margin: 3rem 0 2rem; }
-  .author-signature { padding: 1rem 0; font-family: 'Inter', sans-serif; }
+  .author-signature { padding: 1.5rem 0; font-family: 'Inter', sans-serif; }
   
-  /* Contenedor Flex para alinear foto e info */
   .sig-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espacio entre foto y texto */
-    max-width: 600px; /* Ajuste opcional de ancho máximo */
+    gap: 25px;
+    max-width: 650px;
   }
 
-  /* Estilos de la Foto de Perfil */
+  /* Control de la imagen de perfil */
   .sig-avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%; /* Foto circular */
-    object-fit: cover; /* Asegura que la imagen no se deforme */
-    border: 1px solid #eee; /* Borde sutil opcional */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #f0f0f0;
     display: block;
+    background-color: #fafafa; /* Color de fondo mientras carga */
   }
 
-  .sig-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #888; margin: 0 0 0.5rem 0; }
-  .sig-name { font-weight: 300; font-size: 1.5rem; margin: 0; color: #1a1a1a; line-height: 1.2; }
-  .sig-bio { font-size: 0.9rem; color: #666; font-style: italic; max-width: 450px; margin: 0.5rem 0; }
+  .sig-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #999; margin: 0 0 0.4rem 0; }
+  .sig-name { font-weight: 300; font-size: 1.6rem; margin: 0; color: #1a1a1a; line-height: 1.1; }
+  .sig-bio { font-size: 0.85rem; color: #555; font-style: italic; margin: 0.6rem 0; line-height: 1.4; }
   
-  .sig-links a { font-size: 0.8rem; color: #000; text-decoration: none; border-bottom: 1px solid #ccc; transition: 0.3s; }
-  .sig-links a:hover { border-bottom: 1px solid #000; }
+  .sig-links { margin-top: 0.8rem; }
+  .sig-links a { font-size: 0.85rem; color: #000; text-decoration: none; border-bottom: 1px solid #ddd; transition: 0.3s; padding-bottom: 2px; }
+  .sig-links a:hover { border-bottom: 1px solid #000; color: #000; }
 
-  /* Ajuste responsive básico */
+  /* Ajuste para móviles */
   @media (max-width: 480px) {
-    .sig-container { flex-direction: column; text-align: center; gap: 10px; }
-    .sig-bio { margin-left: auto; margin-right: auto; }
+    .sig-container { flex-direction: column; text-align: center; }
+    .sig-avatar { margin: 0 auto; }
   }
 </style>
