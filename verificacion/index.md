@@ -96,8 +96,28 @@ title: Verificación de Autenticidad
     .cert-title {
         font-size: 1.8rem;
         font-weight: 400;
-        margin: 0 0 2rem 0;
+        margin: 0 0 1rem 0;
         letter-spacing: -0.5px;
+    }
+
+    /* Estilos avanzados para la imagen del modal */
+    .cert-artwork-container {
+        width: 100%;
+        max-height: 40vh; /* Máxima altura de la imagen en relación a la pantalla */
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .cert-artwork {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
+        display: block;
     }
 
     .info-table {
@@ -148,6 +168,7 @@ title: Verificación de Autenticidad
 
 <script>
     // Generación dinámica de la base de datos desde Jekyll
+    // Asumimos que `imagen` es un campo en site.data.certificados
     const database = [
         {% for cert in site.data.certificados %}
         {
@@ -175,6 +196,10 @@ title: Verificación de Autenticidad
             contenedor.innerHTML = `
                 <div class="badge-valid">✓ Certificado Válido</div>
                 <h3 class="cert-title">${pieza.titulo}</h3>
+                
+                <div class="cert-artwork-container">
+                    <img src="${pieza.imagen}" alt="Obra: ${pieza.titulo}" class="cert-artwork">
+                </div>
                 
                 <div class="info-table">
                     <div class="info-row">
