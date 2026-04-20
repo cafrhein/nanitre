@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article style="max-width: 800px; margin: 0 auto;">
+  <header style="margin-bottom: 3rem;">
+    <h1 style="font-size: 2.5rem; font-weight: 600; letter-spacing: -1px;">{{ page.title }}</h1>
+    <time style="color: var(--secondary-color); font-size: 0.9rem;">
+      {{ page.date | date: "%d de %B, %Y" }}
+    </time>
+  </header>
+
+  <div class="post-content" style="line-height: 1.8; font-size: 1.1rem;">
+    {{ content }}
+  </div>
+
+  {% include author-signature.html %}
+
+  <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #f0f0f0;">
+    <a href="{{ site.baseurl }}/blog" style="text-decoration: none; color: var(--primary-color); font-size: 0.9rem; font-weight: 600;">
+      ← Volver al Blog
+    </a>
+  </footer>
+</article>
