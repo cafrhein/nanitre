@@ -5,8 +5,16 @@ permalink: /perfil/
 ---
 
 <style>
+  /* 1. Ocultar Menú Superior solo en esta página */
+  /* Ajustamos los selectores comunes de Jekyll (Minima y otros temas estándar) */
+  header.site-header, 
+  .site-header, 
+  nav.site-nav {
+    display: none !important;
+  }
+
   /* Reset y Base para Full Width */
-  .main-content { /* Ajuste por si tu tema Jekyll tiene padding por defecto */
+  .main-content {
     padding: 0 !important;
     max-width: 100% !important;
   }
@@ -19,7 +27,7 @@ permalink: /perfil/
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    height: 45vh; /* Altura relativa a la pantalla */
+    height: 45vh;
     min-height: 300px;
     background: #1a1a1a;
     overflow: hidden;
@@ -47,9 +55,9 @@ permalink: /perfil/
     width: 180px;
     height: 180px;
     object-fit: cover;
-    object-position: center 10%; /* Mantiene encuadre del rostro */
+    object-position: center 10%;
     display: block;
-    margin: -90px auto 30px auto; /* Sube la mitad del tamaño de la foto */
+    margin: -90px auto 30px auto;
     border: 6px solid #fff;
     border-radius: 50%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -94,6 +102,32 @@ permalink: /perfil/
     font-weight: bold;
   }
 
+  /* Estilo del Botón Volver */
+  .back-container {
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .btn-back {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid #111;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .btn-back:hover {
+    background: #111;
+    color: #fff;
+  }
+
   /* Responsivo */
   @media (max-width: 768px) {
     .hero-full-width { height: 30vh; }
@@ -135,5 +169,9 @@ permalink: /perfil/
     <p>
       Desde 2018, lidero mi propio estudio como <strong>Artista Visual y Gestora de Proyectos</strong>, gestionando la administración de marca, la relación con coleccionistas y la curaduría de piezas certificadas.
     </p>
+  </div>
+
+  <div class="back-container">
+    <a href="javascript:history.back()" class="btn-back">← Volver al inicio</a>
   </div>
 </div>
