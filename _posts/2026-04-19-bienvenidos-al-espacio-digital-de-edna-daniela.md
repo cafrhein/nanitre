@@ -1,26 +1,25 @@
 ---
 layout: post
-title: "Bienvenidos a mi Espacio Digital: Arte, Proceso y Autenticidad"
+title: "Abrir el estudio"
 date: 2026-04-19 09:00:00 -0600
-categories: [Noticias, General]
-tags: [bienvenida, arte-contemporaneo, portafolio]
-author: "Edna Daniela Trejo Martínez"
-description: "Inauguración oficial del sitio web nanitre.com, un espacio dedicado a la exploración visual y la transparencia para coleccionistas."
+categories: [Estudio]
+tags: [proceso, pintura, archivo]
+author: "Daniela Trejo"
+description: "Una bienvenida al cuaderno de estudio de Nanitre: obra, procesos y memoria."
 ---
 
-¡Bienvenidos a este nuevo nodo de creatividad! 
+Abrir este espacio es extender la puerta del estudio. Aquí conviven la obra terminada, las preguntas que aparecen durante el proceso y los rastros que deja cada pieza antes de encontrar su forma definitiva.
 
-Este sitio no es solo un portafolio convencional; es el **ecosistema digital oficial** diseñado para albergar mi trayectoria como artista visual. Aquí, la obra de arte es la protagonista absoluta, presentada bajo una estética minimalista que permite apreciar cada trazo y concepto sin distracciones.
+### La obra como punto de encuentro
 
-### ¿Qué encontrarás en este sitio?
+Pintar es una forma de observar con más tiempo. Me interesa aquello que permanece en los vínculos, en los objetos que nos acompañan y en la luz que transforma una escena cotidiana. Cada obra nace de esa atención y se construye lentamente, capa sobre capa.
 
-1.  **Galería Curada (`/_portfolio`):** Una exploración detallada de mis obras, donde podrás consultar técnicas, dimensiones y la narrativa detrás de cada pieza.
-2.  **Bitácora de Proceso (`/_posts`):** Este blog servirá como un diario de desarrollo, donde compartiré avances de nuevas colecciones, noticias y reflexiones sobre el arte contemporáneo.
-3.  **Sistema de Verificación de Certificados:** En nuestra sección de `/verificacion`, los coleccionistas podrán validar la autenticidad de sus adquisiciones de manera instantánea mediante nuestra base de datos interna.
+### Un cuaderno abierto
 
-### Filosofía del Proyecto
-Este espacio ha sido construido bajo estándares de **alto rendimiento y diseño UX de élite**, utilizando tecnologías estáticas para garantizar que la experiencia de usuario sea fluida, segura y visualmente impecable.
+Este cuaderno reunirá notas de proceso, referencias, pruebas y reflexiones desde el estudio. No pretende explicar por completo las imágenes, sino compartir parte del recorrido que existe detrás de ellas.
 
-Gracias por acompañarme en esta evolución digital. Te invito a explorar la galería y a conectar con mi visión artística.
+El portafolio presenta las piezas terminadas con su técnica, dimensiones y registro. La sección de verificación permite consultar los certificados publicados por el estudio y confirmar que un identificador corresponde a una obra del archivo.
 
-**— Edna Daniela Trejo Martínez**
+Gracias por entrar. Este espacio seguirá creciendo junto con la pintura.
+
+**— Daniela Trejo**
