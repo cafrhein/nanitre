@@ -1,61 +1,9 @@
-<hr class="sig-divider">
-<section class="author-signature">
-  <div class="sig-container">
-    <div class="sig-avatar-col">
-      <img src="{{ '/assets/img/Daniela_Trejo.png' | relative_url }}" alt="Daniela Trejo" class="sig-avatar" loading="lazy">
-    </div>
-    
-    <div class="sig-info-col">
-      <div class="sig-content-wrapper">
-        <p class="sig-label">Artista & Autora</p>
-        <h3 class="sig-name">Daniela Trejo</h3>
-        <p class="sig-bio">Explorando la intersección entre la plástica contemporánea.</p>
-        
-        <div class="sig-links">
-          <a href="{{ '/portfolio' | relative_url }}">Portafolio</a> • 
-          <a href="https://www.instagram.com/naniitre/" target="_blank" rel="noopener noreferrer">Contacto</a>
-        </div>
-      </div>
-    </div>
+<section class="author-note" aria-label="Sobre la autora">
+  <img src="{{ '/assets/img/Daniela_Trejo.png' | relative_url }}" alt="" loading="lazy">
+  <div>
+    <p class="eyebrow">Artista & autora</p>
+    <h2>Daniela Trejo</h2>
+    <p>Artista visual. Su práctica explora la materia, la memoria y las huellas de la experiencia.</p>
+    <a class="text-link" href="{{ '/perfil/' | relative_url }}">Conocer su trayectoria <span aria-hidden="true">↗</span></a>
   </div>
 </section>
-
-<style>
-  .sig-divider { border: 0; border-top: 1px solid #eee; margin: 3rem 0 2rem; }
-  .author-signature { padding: 1.5rem 0; font-family: 'Inter', sans-serif; }
-  
-  .sig-container {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    max-width: 650px;
-  }
-
-  /* Evita que el contenedor de texto aplaste la imagen */
-  .sig-avatar-col {
-    flex-shrink: 0; 
-  }
-
-  .sig-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1px solid #f0f0f0;
-    display: block;
-    background-color: #fafafa;
-  }
-
-  .sig-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #999; margin: 0 0 0.4rem 0; }
-  .sig-name { font-weight: 300; font-size: 1.6rem; margin: 0; color: #1a1a1a; line-height: 1.1; }
-  .sig-bio { font-size: 0.85rem; color: #555; font-style: italic; margin: 0.6rem 0; line-height: 1.4; }
-  
-  .sig-links { margin-top: 0.8rem; }
-  .sig-links a { font-size: 0.85rem; color: #000; text-decoration: none; border-bottom: 1px solid #ddd; transition: 0.3s; padding-bottom: 2px; }
-  .sig-links a:hover { border-bottom: 1px solid #000; color: #000; }
-
-  @media (max-width: 480px) {
-    .sig-container { flex-direction: column; text-align: center; }
-    .sig-avatar { margin: 0 auto; }
-  }
-</style>
