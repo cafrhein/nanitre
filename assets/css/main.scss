@@ -213,3 +213,15 @@ button, input { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+.author-note { margin-top: 80px; padding: 34px 0; display: grid; grid-template-columns: 130px 1fr; gap: 34px; align-items: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.author-note img { width: 130px; height: 150px; object-fit: cover; object-position: center top; background: var(--acid); }
+.author-note .eyebrow { margin-bottom: 8px; }
+.author-note h2 { margin: 0 0 10px; font: 400 30px var(--serif); }
+.author-note p:not(.eyebrow) { max-width: 480px; color: var(--muted); font: 15px/1.6 var(--serif); }
+.author-note .text-link { margin-top: 8px; }
+@media (max-width: 560px) {
+  .author-note { grid-template-columns: 90px 1fr; gap: 20px; }
+  .author-note img { width: 90px; height: 110px; }
+  .author-note h2 { font-size: 24px; }
+}
