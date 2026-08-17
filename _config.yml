@@ -1,16 +1,13 @@
-# Identidad del Sitio
-title: Edna Daniela Trejo Martínez | Nanitre
+# Identidad del sitio
+title: Nanitre | Daniela Trejo
 email: contacto@nanitre.com
 description: >-
-  Nanitre es Daniela Trejo, artista. En este sitio encontrarás su portafolio de obra, un blog donde se documenta su proceso creativo y un registro de certificados de autenticidad que valida cada pieza. 
-  Exploración visual, procesos creativos y verificación de autenticidad.
+  Daniela Trejo es artista visual. Pintura, memoria, procesos de estudio
+  y registro público de certificados de autenticidad.
 
-# Configuración de URLs
-# Ajustado para que funcione en cafrhein.github.io/nanitre/
 baseurl: ""
 url: "https://nanitre.com"
 
-# Configuración de Colecciones
 collections:
   portfolio:
     output: true
@@ -19,7 +16,6 @@ collections:
     output: true
     permalink: /blog/:title/
 
-# Ajustes de Build
 markdown: kramdown
 highlighter: rouge
 exclude:
@@ -29,8 +25,7 @@ exclude:
   - vendor/
   - bundle/
 
-# Datos Personalizados
 author:
   name: "Daniela Trejo"
   github: "danitrejo"
-  instagram: "@nanitre.art"
+  instagram: "@naniitre"
