@@ -2,53 +2,17 @@
 layout: default
 ---
 
-<style>
-  /* Override para que el header del sitio fluya con el scroll solo en este layout */
-  header {
-    position: relative !important;
-    top: auto !important;
-    backdrop-filter: none !important;
-    background: var(--bg-color) !important;
-  }
-</style>
-
-<article style="max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: left;">
-  
-  <header style="margin-bottom: 3rem;">
-    
-    <h1 style="
-      font-size: 2.5rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin: 0;
-      line-height: 1.2;
-      overflow-wrap: break-word;
-      text-wrap: balance;
-    ">
-      {{ page.title }}
-    </h1>
-    
-    <time style="
-      display: block;
-      margin-top: 0.5rem;
-      color: var(--secondary-color);
-      font-size: 0.9rem;
-    ">
-      {{ page.date | date: "%d de %B, %Y" }}
-    </time>
-  
+<article class="post">
+  <header>
+    <p class="eyebrow">Cuaderno de estudio · {{ page.date | date: "%d · %m · %Y" }}</p>
+    <h1>{{ page.title }}</h1>
   </header>
 
-  <div class="post-content" style="line-height: 1.8; font-size: 1.1rem;">
-    {{ content }}
-  </div>
+  <div class="post__content">{{ content }}</div>
 
   {% include author-signature.html %}
 
-  <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #f0f0f0;">
-    <a href="{{ site.baseurl }}/blog" style="text-decoration: none; color: var(--primary-color); font-size: 0.9rem; font-weight: 600;">
-      ← Volver al Blog
-    </a>
-  </footer>
-
+  <nav class="obra-back" aria-label="Volver al cuaderno">
+    <a class="text-link" href="{{ '/blog/' | relative_url }}"><span aria-hidden="true">←</span> Volver al cuaderno</a>
+  </nav>
 </article>
